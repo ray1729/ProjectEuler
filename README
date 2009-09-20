@@ -1,0 +1,3 @@
+First pass at solutions to the Project Euler problems - a mix of Perl
+and Clojure.  Plan is to rework Perl solutions in Clojure as a learning
+exercise.  Some of these solutions can be improved!
