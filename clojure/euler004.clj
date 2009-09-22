@@ -2,7 +2,7 @@
 (ns ray1729.projecteuler.euler004)
 
 (defn palindrome?
-  ([s] (let [chars (re-seq #"." (.toString s))]
+  ([s] (let [chars (re-seq #"." (str s))]
          (= chars (reverse chars)))))
 
 (defn euler004
