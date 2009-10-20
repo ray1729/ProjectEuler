@@ -36,6 +36,15 @@
     (map (fn [[a b]] (* a b))
       (partition 2 (interleave (reverse digits) (iterate #(* 10 %) 1))))))
 
+(defn digits-to-integer2 [digits]
+  (reduce +
+    (map (fn [[a b]] (* a b))
+      (map vector (reverse digits) (iterate #(* 10 %) 1)))))
+
+(defn digits-to-integer3 [digits]
+  (reduce +
+    (map #(* %1 %2) (reverse digits) (iterate #(* 10 %) 1))))
+
 (defn rotate [coll]
   (conj (take (dec (count coll)) coll) (last coll)))
 
